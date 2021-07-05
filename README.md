@@ -29,8 +29,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/responsive-page-for-easybank-built-using-alpinejs-html5-and-css3-XDisJDQcy)
+- [Live site URL](https://easybank-landing-page-six-beta.vercel.app/)
 
 ## My process
 
