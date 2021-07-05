@@ -1,0 +1,663 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+/* Header */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: hsl(0, 0%, 100%);
+}
+
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 1rem;
+    position: relative;
+}
+
+header nav ul li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .2rem;
+    background: linear-gradient(135deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    bottom: -1.4rem;
+    left: 0;
+    opacity: 0;
+    transition: opacity .5s;
+}
+
+header nav ul li:hover::after{
+    opacity: 1;
+}
+
+header nav ul li:focus::after{
+    opacity: 1;
+}
+
+header nav ul li a{
+    text-decoration: none;
+    color: hsl(233, 8%, 62%);
+    transition: .35s;
+    cursor: pointer;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+header nav ul li a:hover{
+    color: hsl(233, 26%, 24%);
+}
+
+header nav ul li a:focus{
+    color: hsl(233, 26%, 24%);
+}
+
+header .btn{
+    text-decoration: none;
+    padding: .5rem 1.5rem;
+    background: linear-gradient(135deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    border-radius: 2rem;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: 1.75s;
+    font-size: .8rem;
+}
+
+header .btn:hover{
+    background: linear-gradient(135deg, hsla(136, 65%, 51%, 0.6), hsla(192, 70%, 51%, 0.6));
+}
+
+header .mobile-menu{
+    display: none;
+}
+
+/* Hero starts here */
+.hero{
+    padding: 0 0 0 8rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: hsl(0, 0%, 98%);
+}
+
+.hero .hero-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    height: 100%;
+    position: relative;
+}
+
+.hero .hero-row .left-col{
+    flex-basis: 50%;
+}
+
+.hero .hero-row .right-col{
+    display: none;
+    position: relative;
+}
+
+.hero .hero-row .left-col .left-col-text{
+    max-width: 80%;
+}
+
+.hero .hero-row .left-col .left-col-text h1{
+    font-size: 3rem;
+    line-height: 1.1;
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+    margin-bottom: 1.3rem;
+}
+
+.hero .hero-row .left-col .left-col-text p{
+    font-size: 1rem;
+    line-height: 1.3;
+    color: hsl(233, 8%, 62%);
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+.hero .hero-row .left-col .left-col-text a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: .5rem 1.5rem;
+    border-radius: 1.5rem;
+    font-size: .9rem;
+    transition: .7s;
+    background: linear-gradient(135deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+
+.hero .hero-row .left-col .left-col-text a:hover{
+    background: linear-gradient(135deg, hsla(136, 65%, 51%, 0.6), hsla(192, 70%, 51%, 0.6));
+}
+
+.hero .hero-row .desktopBg{
+    position: absolute;
+    right: -32rem;
+    top: -10rem;
+}
+
+.hero .hero-row .mockup{
+    position: absolute;
+    top: -5rem;
+    right: -12rem;
+    z-index: 9;
+}
+
+.hero .hero-row .right-col .mobileImg, .hero .hero-row .right-col .mobileMock{
+    display: none;
+}
+
+.mobile-nav{
+    display: none;
+}
+
+/* Features starts here */
+.features{
+    padding: 4rem 8rem 2rem;
+    background: hsl(220, 16%, 96%);
+}
+
+.features h2{
+    font-size: 2rem;
+    font-weight: 400;
+    color: hsl(233, 26%, 24%);
+    margin-bottom: 1.3rem;
+}
+
+.features p{
+    font-size: 1rem;
+    line-height: 1.3;
+    color: hsl(233, 8%, 62%);
+    margin-bottom: 3rem;
+}
+
+.features .row{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.features .row .col{
+    flex-basis: 23%;
+}
+
+.features .row .col img{
+    margin-bottom: 2rem;
+}
+
+.features .row .col h3{
+    margin-bottom: 1rem;
+    color: hsl(233, 26%, 24%);
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.features .row .col p{
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+/* Articles starts here */
+.articles{
+    padding: 4rem 8rem;
+    background: hsl(0, 0%, 98%);
+}
+
+.articles h2{
+    font-size: 2rem;
+    font-weight: 400;
+    color: hsl(233, 26%, 24%);
+    margin-bottom: 2rem;
+}
+
+.articles .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.articles .row .col{
+    flex-basis: 23%;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: .3rem;
+    overflow: hidden;
+}
+
+.articles .row .col img{
+    width: 100%;
+    height: 50%;
+}
+
+.articles .row .col .col-text{
+    padding: 1rem;
+    height: 50%;
+    background: hsl(0, 0%, 100%);
+}
+
+.articles .row .col .col-text h3{
+    font-size: .7rem;
+    color: hsl(233, 8%, 62%);
+    margin-bottom: .5rem;
+    font-weight: 400;
+}
+
+.articles .row .col .col-text a{
+    font-size: 1rem;
+    color: hsl(233, 26%, 24%);
+    font-weight: 300;
+    cursor: pointer;
+    transition: .35s;
+}
+
+.articles .row .col .col-text a:hover{
+    color: hsl(136, 65%, 51%);
+}
+
+.articles .row .col .col-text p{
+    font-size: .7rem;
+    margin-top: .5rem;
+    color: hsl(233, 8%, 62%);
+    font-weight: 300;
+}
+
+/* Footer starts here */
+footer{
+    padding: 2rem 8rem;
+    background: hsl(233, 26%, 24%);
+    color: hsl(0, 0%, 100%);
+}
+
+footer .row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .row .col:nth-child(4){
+    flex-basis: 30%;
+    text-align: right;
+}
+
+footer .row .col > a > img{
+    filter: invert(1);
+}
+
+footer .row .col:nth-child(1) ul{
+    margin-top: 3rem;
+}
+
+footer .row .col:nth-child(1) ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+footer .row .col ul li a img:hover{
+    transition: .5s;
+}
+
+footer .row .col ul li a img:hover{
+    filter: invert(1) brightness(0);
+}
+
+footer .row .col ul li{
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+footer .row .col ul li a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    transition: .35s;
+    font-size: .8rem;
+    font-weight: 300;
+}
+
+footer .row .col ul li a:hover{
+    color: hsl(136, 65%, 51%);
+}
+
+footer .row .col:nth-child(4) a{
+    text-decoration: none;
+    color: hsl(0, 0%, 100%);
+    padding: .5rem 1.3rem;
+    border-radius: 2rem;
+    background: linear-gradient(135deg, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+    font-size: .8rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+footer .row .col:nth-child(4) a:hover{
+    background: linear-gradient(135deg, hsla(136, 65%, 51%, 0.6), hsla(192, 70%, 51%, 0.637));
+}
+
+footer .row .col p{
+    margin-top: 3rem;
+    font-size: .9rem;
+    color: hsl(233, 8%, 62%);
+}
+
+.attribution { 
+    font-size: .8rem; 
+    text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(233, 8%, 62%);
+    text-decoration: none;
+    font-size: .8rem;  
+}
+
+/* Responsive design starts here */
+@media (max-width: 991px){
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    header a img{
+        width: 6rem;
+    }
+
+    header nav, 
+    header .btn{
+        display: none;
+    }
+
+    header .mobile-menu {
+        display: block;
+    }
+
+    .hero {
+        padding: 1.5rem;
+        height: 120vh;
+    }
+
+    .hero .hero-row .desktopBg, .hero .hero-row .mockup {
+        display: none;
+    }
+
+    .hero .hero-row{
+        flex-wrap: wrap;
+        min-height: 100vh;
+    }
+
+    .hero .hero-row .right-col{
+        display: block;
+        flex-basis: 100%;
+        order: 1;
+        height: 50vh;
+        margin-bottom: 3rem;
+    }
+
+    .hero .hero-row .right-col .mobileBg{
+        display: block;
+        width: 120%;
+        height: 130%;
+        position: absolute;
+        left: -2rem;
+    }
+
+    .hero .hero-row .right-col .mobileMock{
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: -5rem;
+    }
+
+    .hero .hero-row .left-col {
+        flex-basis: 100%;
+        order: 2;
+        height: 60vh;
+    }
+
+    .hero .hero-row .left-col .left-col-text {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero .hero-row .left-col .left-col-text h1 {
+        font-size: 2.3rem;
+        margin-bottom: .8rem;
+    }
+
+    .hero .hero-row .left-col .left-col-text p {
+        font-size: .8rem;
+        line-height: 1.4;
+    }
+
+    .hero .hero-row .left-col .left-col-text a {
+        padding: .7rem 1.5rem;
+    }
+
+    .features {
+        padding: 3rem 1.5rem 2rem;
+    }
+
+    .features h2 {
+        font-size: 1.9rem;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .features p {
+        font-size: .9rem;
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    .features p br{
+        display: none;
+    }
+
+    .features .row .col {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .features .row .col img {
+        margin-bottom: 1.5rem;
+    }
+
+    .articles {
+        padding: 3rem 1.5rem;
+    }
+
+    .articles h2 {
+        font-size: 1.9rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .articles .row .col {
+        flex-basis: 100%;
+        height: 20rem;
+        margin-bottom: 1rem;
+        box-shadow: 0 0 4px 0 hsla(0, 0%, 76%, 0.295);
+    }
+
+    .articles .row .col .col-text a {
+        font-size: 1.05rem;
+    }
+
+    .articles .row .col .col-text p {
+        font-size: .7rem;
+        line-height: 1.5;
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    footer .row .col{
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    footer .row .col:nth-child(1){
+        margin-bottom: 1.5rem;
+    }
+
+    footer .row .col:nth-child(1) ul {
+        margin-top: 1rem;
+    }
+
+    footer .row .col:nth-child(1) ul li {
+        margin: 0 .3rem;
+    }
+
+    footer .row .col ul li {
+        margin-bottom: .6rem;
+    }
+
+    footer .row .col ul li a {
+        font-size: .8rem;
+    }
+
+    footer .row .col:nth-child(4) {
+        margin-top: 1.5rem;
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    footer .row .col p {
+        margin-top: 1.5rem;
+        font-size: .9rem;
+    }
+
+    .attribution {
+        margin-top: 2rem;
+    }
+
+    .mobile-nav{
+        display: block;
+        width: 85%;
+        background: hsl(0, 0%, 100%);
+        position: fixed;
+        left: 50%;
+        top: 4rem;
+        transform: translateX(-50%);
+        padding: .5rem;
+        border-radius: .25rem;
+        box-shadow: 0 0 50rem 0 hsl(233, 36%, 14%);
+    }
+
+    .mobile-nav nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mobile-nav nav ul li{
+        list-style: none;
+        margin: 1rem 0;
+    }
+
+    .mobile-nav nav ul li a{
+        text-decoration: none;
+        color: hsl(233, 26%, 24%);
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+}
+
+@media (max-width: 320px){
+    header {
+        padding: .7rem 1rem;
+    }
+
+    .hero .hero-row .right-col .mobileMock {
+        width: 110%;
+        top: -4rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .hero .hero-row .right-col .mobileBg {
+        width: 130%;
+    }
+
+    .hero .hero-row .left-col .left-col-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero .hero-row .left-col .left-col-text p {
+        font-size: .7rem;
+        line-height: 1.7;
+    }
+
+    .features h2 {
+        font-size: 1.7rem;
+        margin-bottom: .7rem;
+    }
+
+    .features p {
+        font-size: .7rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .features .row .col img {
+        margin-bottom: 1.2rem;
+    }
+
+    .features .row .col h3 {
+        margin-bottom: .7rem;
+    }
+
+    .features .row .col p {
+        font-size: .8rem;
+    }
+
+    .articles h2 {
+        font-size: 1.6rem;
+    }
+
+    .articles .row .col .col-text p {
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 280px){
+    .hero .hero-row .right-col .mobileMock {
+        width: 120%;
+    }
+
+    .hero .hero-row .left-col .left-col-text h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero .hero-row .left-col .left-col-text a {
+        padding: .5rem 1.3rem;
+    }
+
+    .features {
+        padding: 2rem 1.5rem 1rem;
+    }
+}
