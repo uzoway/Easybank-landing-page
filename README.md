@@ -81,4 +81,4 @@ Below is a code snippet of how I was able to achieve the mobile navigation using
 
 ## Acknowledgments
 
-I'll like to appreciate Matt Studert for the amazing worh he is doing with Frontend Mentor, providing this great designs to help Frontend Developer build realistic projects thereby developing coding skills
+I'll like to appreciate Matt Studert for the amazing work he is doing with Frontend Mentor, providing this great mock-ups to help Frontend Developer build realistic projects thereby developing coding skills.
